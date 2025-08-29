@@ -18,6 +18,8 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        cta: "bg-construction-orange text-construction-orange-foreground hover:bg-construction-orange/90 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200",
+        whatsapp: "bg-construction-yellow text-construction-yellow-foreground hover:bg-construction-yellow/90 border-2 border-construction-yellow hover:border-construction-yellow/90 shadow-lg hover:shadow-xl",
       },
       size: {
         default: "h-10 px-4 py-2",
