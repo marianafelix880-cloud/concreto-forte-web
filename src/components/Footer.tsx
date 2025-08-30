@@ -45,9 +45,9 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-construction-orange mt-1 flex-shrink-0" />
                 <span className="text-sm">
-                  Rua da Construção, 1234<br />
+                  Rua Via 1, n° 1101<br />
                   Distrito Industrial<br />
-                  São Paulo - SP, 01234-567
+                  Montenegro - RS, 95780-000
                 </span>
               </div>
               <div className="flex items-start gap-2">
