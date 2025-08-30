@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, MessageCircle, Mail, Clock } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-foreground text-background">
+  return <footer className="bg-foreground text-background">
       <div className="container px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -16,7 +14,7 @@ const Footer = () => {
               para obras em todo o Brasil.
             </p>
             <div className="space-y-2 text-sm text-background/60">
-              <p>CNPJ: 12.345.678/0001-90</p>
+              <p>CNPJ: 31.739.874/0002-70</p>
               <p>Licença Ambiental: LO-123456</p>
             </div>
           </div>
@@ -27,11 +25,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-construction-orange" />
-                <span className="text-sm">(11) 4000-1234</span>
+                <span className="text-sm">(55) 96384588</span>
               </div>
               <div className="flex items-center gap-2">
-                <MessageCircle className="h-4 w-4 text-construction-orange" />
-                <span className="text-sm">(11) 99999-8888</span>
+                
+                
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-construction-orange" />
@@ -98,8 +96,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
