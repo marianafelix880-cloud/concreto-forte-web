@@ -31,9 +31,11 @@ const HeroSection = () => {
           <Button variant="cta" size="lg" className="text-lg px-8 py-4">
             Solicite Seu Orçamento Agora
           </Button>
-          <Button variant="whatsapp" size="lg" className="text-lg px-8 py-4">
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Fale no WhatsApp
+          <Button variant="whatsapp" size="lg" className="text-lg px-8 py-4" asChild>
+            <a href="https://api.whatsapp.com/send/?phone=555596384588&text=Ol%C3%A1+Gostaria+de+um+Atendimento+Especializado.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Fale no WhatsApp
+            </a>
           </Button>
         </div>
 

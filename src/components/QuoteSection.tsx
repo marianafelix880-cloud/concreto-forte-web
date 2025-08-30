@@ -72,9 +72,11 @@ const QuoteSection = () => {
                   <p className="mb-6 opacity-90">
                     Fale diretamente conosco no WhatsApp e tenha resposta imediata!
                   </p>
-                  <Button variant="whatsapp" size="lg" className="w-full">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Conversar no WhatsApp
+                  <Button variant="whatsapp" size="lg" className="w-full" asChild>
+                    <a href="https://api.whatsapp.com/send/?phone=555596384588&text=Ol%C3%A1+Gostaria+de+um+Atendimento+Especializado.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="mr-2 h-5 w-5" />
+                      Conversar no WhatsApp
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
