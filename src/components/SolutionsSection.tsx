@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Building, Layers, Zap, Ruler } from "lucide-react";
-import concreteTruckImage from "@/assets/concrete-truck.jpg";
 
 const solutions = [
   {
@@ -43,7 +42,7 @@ const SolutionsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutions.map((solution, index) => (
             <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-2 hover:border-construction-orange/20">
               <CardHeader>
@@ -72,24 +71,6 @@ const SolutionsSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Imagem do Caminhão */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8">
-            Entrega Rápida e <span className="text-construction-orange">Segura</span>
-          </h3>
-          <div className="relative max-w-4xl mx-auto">
-            <img 
-              src={concreteTruckImage} 
-              alt="Caminhão betoneira entregando concreto na obra" 
-              className="w-full h-auto rounded-2xl shadow-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-          </div>
-          <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Nossa frota moderna garante a entrega do concreto fresco direto na sua obra, com qualidade e pontualidade.
-          </p>
         </div>
       </div>
     </section>
