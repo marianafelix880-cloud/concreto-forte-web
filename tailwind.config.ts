@@ -52,14 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				construction: {
-					orange: 'hsl(var(--construction-orange))',
-					'orange-foreground': 'hsl(var(--construction-orange-foreground))',
-					yellow: 'hsl(var(--construction-yellow))',
-					'yellow-foreground': 'hsl(var(--construction-yellow-foreground))',
-					gray: 'hsl(var(--construction-gray))',
-					'gray-light': 'hsl(var(--construction-gray-light))'
-				},
+				'construction-orange': 'hsl(var(--construction-orange))',
+				'construction-orange-foreground': 'hsl(var(--construction-orange-foreground))',
+				'construction-yellow': 'hsl(var(--construction-yellow))',
+				'construction-yellow-foreground': 'hsl(var(--construction-yellow-foreground))',
+				'construction-gray': 'hsl(var(--construction-gray))',
+				'construction-gray-light': 'hsl(var(--construction-gray-light))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
