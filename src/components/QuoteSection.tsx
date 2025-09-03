@@ -3,8 +3,64 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calculator, MessageCircle } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
+const leadSchema = z.object({
+  name: z.string().min(1, "Nome é obrigatório"),
+  phone: z.string().min(1, "Telefone é obrigatório"),
+  location: z.string().min(1, "Local da obra é obrigatório"),
+  volume: z.string().min(1, "Volume é obrigatório"),
+  deliveryDate: z.string().optional(),
+});
+
+type LeadFormData = z.infer<typeof leadSchema>;
 
 const QuoteSection = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<LeadFormData>({
+    resolver: zodResolver(leadSchema)
+  });
+
+  const onSubmit = async (data: LeadFormData) => {
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase
+        .from('leads')
+        .insert([{
+          name: data.name,
+          phone: data.phone,
+          location: data.location,
+          volume: data.volume,
+          delivery_date: data.deliveryDate || null,
+        }]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Orçamento solicitado com sucesso!",
+        description: "Entraremos em contato em até 2 horas.",
+      });
+      
+      reset();
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
+      toast({
+        title: "Erro ao enviar solicitação",
+        description: "Tente novamente ou entre em contato pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-16 bg-construction-gray-light">
       <div className="container px-4">
@@ -31,36 +87,79 @@ const QuoteSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="name">Nome Completo *</Label>
-                    <Input id="name" placeholder="Seu nome" />
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="name">Nome Completo *</Label>
+                      <Input 
+                        id="name" 
+                        placeholder="Seu nome" 
+                        {...register("name")}
+                        className={errors.name ? "border-destructive" : ""}
+                      />
+                      {errors.name && (
+                        <p className="text-sm text-destructive mt-1">{errors.name.message}</p>
+                      )}
+                    </div>
+                    <div>
+                      <Label htmlFor="phone">Telefone/WhatsApp *</Label>
+                      <Input 
+                        id="phone" 
+                        placeholder="(11) 99999-9999" 
+                        {...register("phone")}
+                        className={errors.phone ? "border-destructive" : ""}
+                      />
+                      {errors.phone && (
+                        <p className="text-sm text-destructive mt-1">{errors.phone.message}</p>
+                      )}
+                    </div>
                   </div>
+                  
                   <div>
-                    <Label htmlFor="phone">Telefone/WhatsApp *</Label>
-                    <Input id="phone" placeholder="(11) 99999-9999" />
+                    <Label htmlFor="location">Local da Obra *</Label>
+                    <Input 
+                      id="location" 
+                      placeholder="Cidade/Bairro" 
+                      {...register("location")}
+                      className={errors.location ? "border-destructive" : ""}
+                    />
+                    {errors.location && (
+                      <p className="text-sm text-destructive mt-1">{errors.location.message}</p>
+                    )}
                   </div>
-                </div>
-                
-                <div>
-                  <Label htmlFor="location">Local da Obra *</Label>
-                  <Input id="location" placeholder="Cidade/Bairro" />
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="volume">Volume Aproximado (m³) *</Label>
-                    <Input id="volume" placeholder="Ex: 15 m³" />
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="volume">Volume Aproximado (m³) *</Label>
+                      <Input 
+                        id="volume" 
+                        placeholder="Ex: 15 m³" 
+                        {...register("volume")}
+                        className={errors.volume ? "border-destructive" : ""}
+                      />
+                      {errors.volume && (
+                        <p className="text-sm text-destructive mt-1">{errors.volume.message}</p>
+                      )}
+                    </div>
+                    <div>
+                      <Label htmlFor="deliveryDate">Data da Entrega</Label>
+                      <Input 
+                        id="deliveryDate" 
+                        type="date" 
+                        {...register("deliveryDate")}
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <Label htmlFor="date">Data da Entrega</Label>
-                    <Input id="date" type="date" />
-                  </div>
-                </div>
 
-                <Button variant="cta" className="w-full text-lg py-6">
-                  Quero meu orçamento rápido
-                </Button>
+                  <Button 
+                    type="submit" 
+                    variant="cta" 
+                    className="w-full text-lg py-6"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Enviando..." : "Quero meu orçamento rápido"}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
 
