@@ -172,7 +172,7 @@ const QuoteSection = () => {
                     Fale diretamente conosco no WhatsApp e tenha resposta imediata!
                   </p>
                   <Button variant="whatsapp" size="lg" className="w-full" asChild>
-                    <a href="https://api.whatsapp.com/send/?phone=555596384588&text=Ol%C3%A1+Gostaria+de+um+Atendimento+Especializado.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                    <a href="https://api.whatsapp.com/send/?phone=5565968693238&text=Ol%C3%A1+Gostaria+de+um+Atendimento+Especializado.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="mr-2 h-5 w-5" />
                       Conversar no WhatsApp
                     </a>
