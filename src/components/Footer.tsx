@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, MessageCircle, Mail, Clock } from "lucide-react";
+
 const Footer = () => {
-  return <footer className="bg-foreground text-background">
+  return (
+    <footer className="bg-foreground text-background">
       <div className="container px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -14,7 +16,7 @@ const Footer = () => {
               para obras em todo o Brasil.
             </p>
             <div className="space-y-2 text-sm text-background/60">
-              <p>CNPJ: 31.739.874/0002-70</p>
+              <p>CNPJ: 34.506.112/0001-30</p>
               <p>Licença Ambiental: LO-123456</p>
             </div>
           </div>
@@ -28,29 +30,55 @@ const Footer = () => {
                 <span className="text-sm">(55) 96384588</span>
               </div>
               <div className="flex items-center gap-2">
-                
-                
-              </div>
-              <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-construction-orange" />
                 <span className="text-sm">contato@concretoforte.com.br</span>
               </div>
             </div>
           </div>
 
-          {/* Address & Hours */}
+          {/* Locations - Mato Grosso */}
           <div>
-            <h4 className="font-semibold mb-4">Localização</h4>
-            <div className="space-y-3">
-              <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-construction-orange mt-1 flex-shrink-0" />
-                <span className="text-sm">
-                  Rua Via 1, n° 1101<br />
-                  Distrito Industrial<br />
-                  Montenegro - RS, 95780-000
-                </span>
+            <h4 className="font-semibold mb-4">Localizações - Mato Grosso</h4>
+            <div className="space-y-4">
+              {/* Cuiabá */}
+              <div>
+                <h5 className="font-medium text-construction-orange mb-2">CUIABÁ</h5>
+                <div className="flex items-start gap-2 mb-2">
+                  <MapPin className="h-4 w-4 text-construction-orange mt-1 flex-shrink-0" />
+                  <span className="text-sm">
+                    Rodovia Palmiro Paes de Barros, km 04, s/n<br />
+                    Parque Cuiabá, Cuiabá/MT
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 text-construction-orange" />
+                  <span className="text-sm">(65) 2118-0640</span>
+                </div>
               </div>
-              <div className="flex items-start gap-2">
+              
+              {/* Rondonópolis */}
+              <div>
+                <h5 className="font-medium text-construction-orange mb-2">RONDONÓPOLIS</h5>
+                <div className="flex items-start gap-2 mb-2">
+                  <MapPin className="h-4 w-4 text-construction-orange mt-1 flex-shrink-0" />
+                  <span className="text-sm">
+                    ROD. MT 270 KM 02 LOTES 03 E 04<br />
+                    ZONA UR RONDONÓPOLIS, 78740-393
+                  </span>
+                </div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 text-construction-orange" />
+                    <span className="text-sm">(31) 9 8707-3868</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 text-construction-orange" />
+                    <span className="text-sm">(66) 9 9940-2884</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-2 pt-2">
                 <Clock className="h-4 w-4 text-construction-orange mt-1" />
                 <div className="text-sm">
                   <p>Segunda a Sexta: 6h às 18h</p>
@@ -96,6 +124,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
