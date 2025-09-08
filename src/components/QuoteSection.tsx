@@ -83,8 +83,8 @@ const QuoteSection = () => {
             </div>
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/lovable-uploads/6440c041-cfc5-4601-ae22-f38d960665ad.png"
-                alt="Acabamento de piso com concreto usinado"
+                src="/lovable-uploads/fb837b39-5b0c-42cb-8473-ba29b93d240d.png"
+                alt="Caminhão betoneira entregando concreto usinado"
                 className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
