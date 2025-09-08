@@ -65,6 +65,31 @@ const QuoteSection = () => {
     <section className="py-16 bg-construction-gray-light">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
+          {/* Images Gallery */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/lovable-uploads/e2befc64-3580-4cc1-92b2-ec5d06c32e6f.png"
+                alt="Aplicação de concreto usinado em obra"
+                className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/lovable-uploads/ec15c70b-9844-4af4-9f99-865bfbd67049.png"
+                alt="Concretagem com bomba de concreto"
+                className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/lovable-uploads/6440c041-cfc5-4601-ae22-f38d960665ad.png"
+                alt="Acabamento de piso com concreto usinado"
+                className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Solicite seu <span className="text-construction-orange">Orçamento</span>
