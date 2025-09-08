@@ -32,7 +32,7 @@ const HeroSection = () => {
             Solicite Seu Orçamento Agora
           </Button>
           <Button variant="whatsapp" size="lg" className="text-lg px-8 py-4" asChild>
-            <a href="https://api.whatsapp.com/send/?phone=556596869323&text=Ol%C3%A1+Gostaria+de+um+Atendimento+Especializado.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send/?phone=554792568901&text=Preciso+de+consultoria+t%C3%A9cnica+para+minha+obra.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-5 w-5" />
               Fale no WhatsApp
             </a>

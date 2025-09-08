@@ -99,7 +99,7 @@ const Footer = () => {
                 Solicitar Orçamento
               </Button>
               <Button variant="whatsapp" className="w-full" asChild>
-                <a href="https://api.whatsapp.com/send/?phone=556596869323&text=Ol%C3%A1+Gostaria+de+um+Atendimento+Especializado.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send/?phone=554792568901&text=Preciso+de+consultoria+t%C3%A9cnica+para+minha+obra.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-4 w-4" />
                   WhatsApp
                 </a>
