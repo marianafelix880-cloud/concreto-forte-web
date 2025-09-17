@@ -7,6 +7,7 @@ import TruckSection from "@/components/TruckSection";
 import AboutSection from "@/components/AboutSection";
 import MapSection from "@/components/MapSection";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <AboutSection />
       <MapSection />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
