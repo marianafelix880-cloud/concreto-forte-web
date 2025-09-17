@@ -65,7 +65,7 @@ const SolutionsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full">
+                <Button variant="cta" className="w-full">
                   Solicitar Orçamento
                 </Button>
               </CardContent>

@@ -27,14 +27,11 @@ const HeroSection = () => {
           Receba concreto pronto direto na sua obra, com qualidade e preço justo.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="cta" size="lg" className="text-lg px-8 py-4">
-            Solicite Seu Orçamento Agora
-          </Button>
-          <Button variant="whatsapp" size="lg" className="text-lg px-8 py-4" asChild>
-            <a href="https://api.whatsapp.com/send/?phone=554792568901&text=Preciso+de+consultoria+t%C3%A9cnica+para+minha+obra.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Fale no WhatsApp
+        <div className="flex justify-center">
+          <Button variant="whatsapp" size="lg" className="text-xl px-12 py-6" asChild>
+            <a href="https://api.whatsapp.com/send/?phone=554792568901&text=Preciso+de+concreto+usinado+para+minha+obra.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-3 h-6 w-6" />
+              Peça seu concreto pelo WhatsApp
             </a>
           </Button>
         </div>

@@ -56,6 +56,8 @@ export default {
 				'construction-orange-foreground': 'hsl(var(--construction-orange-foreground))',
 				'construction-yellow': 'hsl(var(--construction-yellow))',
 				'construction-yellow-foreground': 'hsl(var(--construction-yellow-foreground))',
+				'construction-green': 'hsl(var(--construction-green))',
+				'construction-green-foreground': 'hsl(var(--construction-green-foreground))',
 				'construction-gray': 'hsl(var(--construction-gray))',
 				'construction-gray-light': 'hsl(var(--construction-gray-light))',
 				sidebar: {
