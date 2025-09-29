@@ -65,8 +65,10 @@ const SolutionsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="cta" className="w-full">
-                  Solicitar Orçamento
+                <Button variant="cta" className="w-full" asChild>
+                  <a href="https://api.whatsapp.com/send/?phone=554791826077&text=Preciso+de+concreto+usinado+para+minha+obra.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                    Solicitar Orçamento
+                  </a>
                 </Button>
               </CardContent>
             </Card>
