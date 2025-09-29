@@ -16,7 +16,7 @@ const Footer = () => {
               para obras em todo o Brasil.
             </p>
             <div className="space-y-2 text-sm text-background/60">
-              <p>CNPJ: 34.506.112/0001-30</p>
+              <p>CNPJ: 60.405.446/0008-02</p>
               <p>Licença Ambiental: LO-123456</p>
             </div>
           </div>
@@ -36,45 +36,25 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Locations - Mato Grosso */}
+          {/* Location - Joinville */}
           <div>
-            <h4 className="font-semibold mb-4">Localizações - Mato Grosso</h4>
+            <h4 className="font-semibold mb-4">Localização</h4>
             <div className="space-y-4">
-              {/* Cuiabá */}
+              {/* Joinville */}
               <div>
-                <h5 className="font-medium text-construction-orange mb-2">CUIABÁ</h5>
+                <h5 className="font-medium text-construction-orange mb-2">UNIDADE JOINVILLE</h5>
                 <div className="flex items-start gap-2 mb-2">
                   <MapPin className="h-4 w-4 text-construction-orange mt-1 flex-shrink-0" />
                   <span className="text-sm">
-                    Rodovia Palmiro Paes de Barros, km 04, s/n<br />
-                    Parque Cuiabá, Cuiabá/MT
+                    R. Dr. Humberto Pinheiro Vieira, 200<br />
+                    Distrito Industrial<br />
+                    Joinville - SC<br />
+                    CEP: 89219-570
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 text-construction-orange" />
-                  <span className="text-sm">(65) 2118-0640</span>
-                </div>
-              </div>
-              
-              {/* Rondonópolis */}
-              <div>
-                <h5 className="font-medium text-construction-orange mb-2">RONDONÓPOLIS</h5>
-                <div className="flex items-start gap-2 mb-2">
-                  <MapPin className="h-4 w-4 text-construction-orange mt-1 flex-shrink-0" />
-                  <span className="text-sm">
-                    ROD. MT 270 KM 02 LOTES 03 E 04<br />
-                    ZONA UR RONDONÓPOLIS, 78740-393
-                  </span>
-                </div>
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-construction-orange" />
-                    <span className="text-sm">(31) 9 8707-3868</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-construction-orange" />
-                    <span className="text-sm">(66) 9 9940-2884</span>
-                  </div>
+                  <span className="text-sm">(47) 9182-6077</span>
                 </div>
               </div>
               
