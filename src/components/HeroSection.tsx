@@ -29,7 +29,7 @@ const HeroSection = () => {
 
         <div className="flex justify-center">
           <Button variant="whatsapp" size="lg" className="text-xl px-12 py-6" asChild>
-            <a href="https://api.whatsapp.com/send/?phone=554792568901&text=Preciso+de+concreto+usinado+para+minha+obra.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send/?phone=554791826077&text=Preciso+de+concreto+usinado+para+minha+obra.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-3 h-6 w-6" />
               Peça seu concreto pelo WhatsApp
             </a>

@@ -11,7 +11,7 @@ const FloatingWhatsApp = () => {
         asChild
       >
         <a
-          href="https://api.whatsapp.com/send/?phone=554792568901&text=Preciso+de+concreto+usinado+para+minha+obra.&type=phone_number&app_absent=0"
+          href="https://api.whatsapp.com/send/?phone=554791826077&text=Preciso+de+concreto+usinado+para+minha+obra.&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contato pelo WhatsApp"
