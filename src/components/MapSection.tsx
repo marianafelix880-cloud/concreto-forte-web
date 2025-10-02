@@ -78,18 +78,18 @@ const MapSection = () => {
   const [showTokenInput, setShowTokenInput] = useState(true);
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-12 md:py-16 bg-background">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
             Área de <span className="text-construction-orange">Atendimento</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             Atendemos os principais estados do Centro-Sul do Brasil
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Interactive Map */}
           <div className="relative">
             {showTokenInput ? (
@@ -136,22 +136,22 @@ const MapSection = () => {
 
           {/* Coverage Areas */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Estados Atendidos</h3>
-            <div className="grid grid-cols-1 gap-4 mb-8">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Estados Atendidos</h3>
+            <div className="grid grid-cols-1 gap-3 md:gap-4 mb-6 md:mb-8">
               {coverage.map((area, index) => (
-                <div key={index} className="flex items-center gap-3 p-4 bg-construction-gray-light rounded-lg hover:bg-construction-orange/5 transition-colors">
-                  <div className="w-3 h-3 bg-construction-orange rounded-full"></div>
-                  <span className="font-medium">{area}</span>
+                <div key={index} className="flex items-center gap-3 p-3 md:p-4 bg-construction-gray-light rounded-lg hover:bg-construction-orange/5 transition-colors">
+                  <div className="w-3 h-3 bg-construction-orange rounded-full flex-shrink-0"></div>
+                  <span className="text-sm md:text-base font-medium">{area}</span>
                 </div>
               ))}
             </div>
 
-            <div className="bg-construction-orange/10 p-6 rounded-lg border-l-4 border-construction-orange">
-              <h4 className="font-semibold mb-2 text-construction-orange">Cobertura Completa</h4>
-              <p className="text-muted-foreground mb-3">
+            <div className="bg-construction-orange/10 p-4 md:p-6 rounded-lg border-l-4 border-construction-orange">
+              <h4 className="font-semibold mb-2 text-construction-orange text-sm md:text-base">Cobertura Completa</h4>
+              <p className="text-sm md:text-base text-muted-foreground mb-3">
                 Atendemos todas as principais cidades e regiões metropolitanas destes estados.
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs md:text-sm text-muted-foreground">
                 <strong>Entrega expressa:</strong> Sua cidade não está listada? Entre em contato! 
                 Avaliamos entregas especiais em municípios próximos.
               </p>

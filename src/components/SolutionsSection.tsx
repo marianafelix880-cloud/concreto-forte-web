@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building, Layers, Zap, Ruler } from "lucide-react";
+import { Building, Layers, Zap, Ruler, MessageCircle } from "lucide-react";
 
 const solutions = [
   {
@@ -31,18 +31,18 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-12 md:py-16 bg-background">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
             Nossas <span className="text-construction-orange">Soluções</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Oferecemos o tipo ideal de concreto para cada etapa da sua obra
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {solutions.map((solution, index) => (
             <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-2 hover:border-construction-orange/20">
               <CardHeader>
@@ -67,6 +67,7 @@ const SolutionsSection = () => {
                 </ul>
                 <Button variant="cta" className="w-full" asChild>
                   <a href="https://api.whatsapp.com/send/?phone=554791826077&text=Preciso+de+concreto+usinado+para+minha+obra.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-4 w-4" />
                     Solicitar Orçamento
                   </a>
                 </Button>

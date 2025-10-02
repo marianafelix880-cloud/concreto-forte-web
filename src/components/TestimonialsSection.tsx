@@ -27,18 +27,18 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-12 md:py-16 bg-background">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
             O que nossos <span className="text-construction-orange">clientes</span> dizem
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Mais de 20 anos abastecendo obras que mudam o Brasil
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="hover:shadow-xl transition-shadow duration-300 relative">
               <CardContent className="p-6">

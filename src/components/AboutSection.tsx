@@ -9,22 +9,22 @@ const stats = [
 
 const AboutSection = () => {
   return (
-    <section className="py-16 bg-construction-gray-light">
+    <section className="py-12 md:py-16 bg-construction-gray-light">
       <div className="container px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
               Tradição e <span className="text-construction-orange">Compromisso</span> com sua Obra
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed">
               Há mais de duas décadas fornecendo concreto usinado de alta qualidade para obras 
               de todos os portes. Nossa experiência e compromisso com a excelência fazem de nós 
               o parceiro ideal para sua construção.
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
               {[
                 "Controle rigoroso de qualidade em cada mistura",
                 "Frota própria de caminhões betoneira modernos",
@@ -33,18 +33,18 @@ const AboutSection = () => {
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-construction-orange flex-shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
+                  <span className="text-sm md:text-base text-muted-foreground">{item}</span>
                 </div>
               ))}
             </div>
 
-            <Button variant="cta" size="lg">
+            <Button variant="cta" size="lg" className="w-full sm:w-auto">
               Conheça Nossa História
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
               {stats.map((stat, index) => (
                 <div key={index} className="bg-background p-6 rounded-lg shadow-lg text-center lg:text-left">

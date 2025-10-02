@@ -3,11 +3,11 @@ import { MessageCircle } from "lucide-react";
 
 const FloatingWhatsApp = () => {
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50">
       <Button
         variant="whatsapp"
         size="lg"
-        className="rounded-full w-16 h-16 shadow-2xl hover:scale-110 transition-all duration-300"
+        className="rounded-full w-14 h-14 md:w-16 md:h-16 shadow-2xl hover:scale-110 transition-all duration-300"
         asChild
       >
         <a
@@ -16,7 +16,7 @@ const FloatingWhatsApp = () => {
           rel="noopener noreferrer"
           aria-label="Contato pelo WhatsApp"
         >
-          <MessageCircle className="h-8 w-8" />
+          <MessageCircle className="h-7 w-7 md:h-8 md:w-8" />
         </a>
       </Button>
     </div>
